@@ -1,0 +1,25 @@
+package cadastroalunos;
+
+public class programa {
+
+	public static void main(String[] args) {
+		
+		int opc;
+		
+		do {
+			System.out.printf("===> Sistemas de cadastro <===\n\n");
+            System.out.printf("Escolha uma opção:\n");          
+            System.out.printf("1 - Inserir aluno \n" +
+                              "2 - Listar alunos \n" +
+                              "3 - Situações \n" +
+                              "4 - Listar contas \n" +
+                              "5 - Sair\n\n");
+			
+			
+			
+			
+		}while(opc != 0);
+
+	}
+
+}
