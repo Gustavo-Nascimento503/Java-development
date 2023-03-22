@@ -1,0 +1,56 @@
+package Exercicios;
+
+public class ContaSalario extends Conta{
+	 private double salario;
+	 
+	 public double getSalario() {
+	        return salario;
+	    }
+
+
+	    public void setSalario(double rentabilidade) {
+	        this.rentabilidade = rentabilidade;
+	    }
+	   
+	    public ContaSalario() {
+	    	super();
+	    }
+	    
+	   
+	    public ContaSalario(String agencia, String numero, double saldo, double rentabilidade) {
+	        super(agencia, numero, saldo);
+	       
+	        this.rentabilidade = rentabilidade;
+	    }
+	    
+	    public String exibirDadosConta() {
+	        return "Tipo de Conta: Conta Poupança\n" + super.exibirDadosConta() + "\nRentabilidade: " + rentabilidade;
+	    }
+	    
+	    public void Depositar(double valor) {
+	    	valor = valor * (1+rentabilidade);
+	    	
+	        super.Depositar(valor);
+	    }
+	    
+	    public Boolean Sacar(double valor) {
+	    	if ((getSaldo() + getChequeEspecial()) >= valor) {
+	    		if (valor > getSaldo()) {
+	                valor = valor - getSaldo();
+	                
+	    			Sacar(getSaldo());		
+	    		
+	    			chequeEspecial = chequeEspecial - valor;    		
+	    		}
+	    		else {
+	    			Sacar(valor);
+	    		}
+	            return true;
+	    	}
+	    	else {
+	    		return false;
+	    	}
+	    }
+	}
+
+}

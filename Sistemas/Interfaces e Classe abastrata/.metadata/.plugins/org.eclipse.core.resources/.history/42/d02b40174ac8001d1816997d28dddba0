@@ -1,0 +1,11 @@
+package exInterface.copy;
+
+public interface ContaBancaria {
+	   
+    public void Depositar(double valor);
+   
+    public void Depositar(double valor, String nomeDepositante);
+   
+    public Boolean Sacar(float valor);
+}
+
